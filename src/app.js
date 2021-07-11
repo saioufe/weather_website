@@ -4,7 +4,7 @@ const hbs = require("hbs")
 const geocode = require('./geocode')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 
 // define path for express config
@@ -89,6 +89,6 @@ app.get("*", (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("server is up !")
+app.listen(port, () => {
+    console.log("server is up at port " + port)
 })
